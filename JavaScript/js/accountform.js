@@ -42,8 +42,12 @@ const addUser=(event)=>{
     }
     arr.push(user);
     localStorage.setItem('emiuser',JSON.stringify(arr));
-    alert(`Hi ${firstName} ${lastName} \n Welcome to EMI Banks. \n ${accountType} opened successfully \n Please note down your A/C No is ${accountNumber} for future refernce`);
+    
     clear();
+    setTimeout(()=>{
+        alert(`Hi ${firstName} ${lastName} \n Welcome to EMI Banks. \n ${accountType} opened successfully \n Please note down your A/C No is ${accountNumber} for future refernce`);
+        window.location="index.html"
+    },10000)
 }
 const clear=()=>{
     document.getElementById("firstName").value = null;

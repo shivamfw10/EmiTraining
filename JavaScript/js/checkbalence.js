@@ -8,22 +8,20 @@ const checkBalence=(event)=>{
     var accName = document.getElementById("acName");
     var accBalence = document.getElementById("acBalence");
     const name = document.getElementById("accountNumber").value;
+
     const emiuser = JSON.parse(localStorage.getItem("emiuser"));
+    console.log(emiuser.length);
     for(let i=0;i<emiuser.length;i++){
         let ac_number = emiuser[i].accountNumber;
-        if(ac_number==name){
+        if(ac_number===name){
             accNumber.innerHTML=`${emiuser[i].accountNumber}`;
             accType.innerHTML = `${emiuser[i].accountType}`;
             accName.innerHTML = `${emiuser[i].firstName} ${emiuser[i].lastName}`;
             accBalence.innerHTML = `${emiuser[i].balence}`;
             break;
         }
-        else
-        {
-            alert("Enter valid account number/name");
-            clear();
-        }
     }
+    // clear();
 }
 
 const clear=()=>{
