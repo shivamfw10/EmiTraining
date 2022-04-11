@@ -1,66 +1,64 @@
-
 const checkBalence=(event)=>{
     event.preventDefault();
-
-    var dataDiv = document.getElementById("viewData");
+    let dataDiv = document.getElementById("viewData");
     dataDiv.hidden=false;
+    let accNumber = document.getElementById("acNumber");
+    let accType = document.getElementById("acType");
+    let accName = document.getElementById("acName");
+    let accBalence = document.getElementById("acBalence");
 
-    var accNumber = document.getElementById("acNumber");
-    var accType = document.getElementById("acType");
-    var accName = document.getElementById("acName");
-    var accBalence = document.getElementById("acBalence");
-    var btnSubmit = document.getElementById("btnSubmit");
-
-    var name = document.getElementById("name").value;
+    const accountNum = document.getElementById("accountNumber").value;
+    console.log(accountNum);
     const emiuser = JSON.parse(localStorage.getItem("emiuser"));
-    
+    let flag=false;
     for(let i=0;i<emiuser.length;i++){
         let ac_number = emiuser[i].accountNumber;
-        if(ac_number==name){
+        if(ac_number===accountNum){
             accNumber.innerHTML=`${emiuser[i].accountNumber}`;
             accType.innerHTML = `${emiuser[i].accountType}`;
-            accName.innerHTML = `${emiuser[i].firstName} ${emiuser[i].lastName}`;
+            accName.innerText = `${emiuser[i].firstName} ${emiuser[i].lastName}`;
             accBalence.innerHTML = `${emiuser[i].balence}`;
-            btnSubmit.disabled = true;
+            flag=true;
             break;
         }
     }
+    if(flag==false){
+        alert("Enter Valid Account No.")
+        dataDiv.hidden=true;
+        clear();
+    }
 }
+
 const debitMoney=(event)=>{
     event.preventDefault();
-    var accountNum = document.getElementById("name").value;
+    var accountNum = document.getElementById("accountNumber").value;
     var amount = document.getElementById("amount").value;
-
-    const userdata = JSON.parse(localStorage.getItem("emiuser"));
-    let flag = false;
-    let availableBalance;
-    for (let data of userdata) {
-      if (accountNum == data.accountNumber) {
-        availableBalance = data.balence;
-        flag = true;
-        break;
-      }
-    }
-    console.log(availableBalance);
     if(amount==""){
-        alert("Enter amount")
+        alert("Enter amount");
     }
-    else if (flag && availableBalance<amount) {
-      alert("You can not withdraw amount due to insufficient balence");
-    }else if(flag && amount<availableBalance){
+    if(isNaN(amount)){
+        alert("Enter numeric value");
+    }
+    else{
        let dataArray=JSON.parse(localStorage.getItem("emiuser"));
-       for(let data of dataArray){
-           if(data.accountNumber==accountNum){
-              data.balence = data.balence-amount;
-              break
+       let flag=false;
+       for(let i=0;i<dataArray.length;i++){
+           if(dataArray[i].accountNumber==accountNum && dataArray[i].balence>1000){
+                dataArray[i].balence = dataArray[i].balence-amount;
+                flag=true;
+                break;
            }
        }
-       localStorage.setItem('emiuser',JSON.stringify(dataArray));
-       setTimeout(()=>{
-           window.location="index.html"
-       },5000)
+       if(flag==true){
+            localStorage.setItem('emiuser',JSON.stringify(dataArray));
+            setTimeout(()=>{
+                window.location="index.html"
+            },5000)
+       }
+       else{
+           alert("You can not withdraw money due to insufficient balece");
+       }
     }
-    
 }
 const clear=()=>{
     document.getElementById("name").value=null;

@@ -56,7 +56,11 @@
                                 <form onsubmit="checkBalence(event)">
                                     <div class="form-group">
                                         <label for="name">Account Number</label>
-                                        <input type="text" class="form-control" id="name"  placeholder="Enter Your Name">
+                                        <input type="text" 
+                                            class="form-control" 
+                                            id="accountNumber"  
+                                            placeholder="Enter Your Account Number" 
+                                            onkeypress="onlyNumberKey(event)">
                                     </div>
                                     <button class="btn btn-primary mt-1" type="submit" id="btnSubmit">Submit</button>
                                 </form>
@@ -93,7 +97,7 @@
                                              <input type="text" id="confirmAmount" class="form-controll"/>
                                      </div>
                                 </div> -->
-                                <button type="submit" class="btn btn-success">Withdraw</button>
+                                <button type="submit" class="btn btn-success">Deposit</button>
                                </form>
                             </div>
                         </div>
