@@ -1,4 +1,5 @@
 const addUser=(event)=>{
+    event.preventDefault();
     let accountType = document.getElementById("accountType").value;
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -7,20 +8,23 @@ const addUser=(event)=>{
     let state = document.getElementById("state").value;
     let country = document.getElementById("country").value;
     let email = document.getElementById("email").value;
+    let balence = document.getElementById("depositAmount").value;
+    
+    let input = age.split("-").map(Number);
+    let inputYear = input[0];
+
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
     var accountNumber=null;
-    let balence=0;
-    var randomNum = Math.floor((Math.random() *9999999999+10000));
-    event.preventDefault();
+    var randomNum = Math.floor((Math.random()*9999999999));
     if(accountType=='sav'){
         accountNumber ="Sav"+randomNum;
         accountType="Saving";
     }
-    else if(accountType=="curr"){
+    if(accountType=="curr"){
         accountNumber ="Curr"+randomNum;
         accountType="Current Account"
     }
-
-    console.log(accountType,firstName,lastName,age,location,state,country,email,accountNumber);
     let user = {
         firstName,
         lastName,
@@ -32,22 +36,26 @@ const addUser=(event)=>{
         accountType,
         accountNumber,
         balence
+    };
+    if(currentYear-inputYear<65){
+        let arr;
+        arr = localStorage.getItem('emiuser');
+        if(arr==null){
+            arr=[];
+        }else{
+            arr = JSON.parse(localStorage.getItem('emiuser'));
+        }
+        arr.push(user);
+        localStorage.setItem('emiuser',JSON.stringify(arr));
+        clear();
+        setTimeout(()=>{
+            alert(`Hi ${firstName} ${lastName} \n Welcome to EMI Banks. \n ${accountType} opened successfully \n Please note down your A/C No is ${accountNumber} for future refernce`);
+            window.location="index.html"
+        },5000)
     }
-    let arr;
-    arr = localStorage.getItem('emiuser');
-    if(arr==null){
-        arr=[];
-    }else{
-        arr = JSON.parse(localStorage.getItem('emiuser'));
+    else{
+        alert("You are not eligble")
     }
-    arr.push(user);
-    localStorage.setItem('emiuser',JSON.stringify(arr));
-    
-    clear();
-    setTimeout(()=>{
-        alert(`Hi ${firstName} ${lastName} \n Welcome to EMI Banks. \n ${accountType} opened successfully \n Please note down your A/C No is ${accountNumber} for future refernce`);
-        window.location="index.html"
-    },10000)
 }
 const clear=()=>{
     document.getElementById("firstName").value = null;
@@ -57,4 +65,6 @@ const clear=()=>{
     document.getElementById("state").value = null;
     document.getElementById("country").value = null;
     document.getElementById("email").value = null;
+    document.getElementById("depositAmount").value=null;
 }
+

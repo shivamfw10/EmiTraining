@@ -65,6 +65,9 @@
                                     <div class="form-group">
                                         <label for="firstName">First Name</label>
                                         <input type="text" class="form-control" id="firstName"  placeholder="Enter first name" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                          </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="lastName">Last Name</label>
@@ -72,7 +75,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="age">Age</label>
-                                        <input type="date" class="form-control" id="age" required>
+                                        <input type="date" class="form-control" id="age" min="1957-01-01" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="location">Location</label>
@@ -90,6 +93,10 @@
                                       <label for="email">Email address</label>
                                       <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="depositAmount">Deposit Amount</label>
+                                        <input type="number" class="form-control" id="depositAmount" placeholder="Enter amount" min="500" required>
+                                      </div>
                                     <div class="form-group form-check">
                                       <input type="checkbox" class="form-check-input" id="terms" onchange="document.getElementById('btnSubmit').disabled = !this.checked;">
                                       <label class="form-check-label" for="exampleCheck1">**Terms & condition apply.</label>
@@ -103,18 +110,7 @@
                 </div>
             </div>
         </div>
-        
     </div>
     <script src="js/accountform.js"></script>
-    <script>
-        var date = document.getElementById("age").value;
-        var varDate = new Date(date); //dd-mm-YYYY
-        var today = new Date();
-
-        if(varDate >= today) {
-        //Do something..
-        alert("Working!");
-    }
-    </script>
 </body>
 </html>
