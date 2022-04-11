@@ -1,29 +1,37 @@
 
 const checkBalence=(event)=>{
     event.preventDefault();
-    var dataDiv = document.getElementById("viewData");
+    let dataDiv = document.getElementById("viewData");
     dataDiv.hidden=false;
-    var accNumber = document.getElementById("acNumber");
-    var accType = document.getElementById("acType");
-    var accName = document.getElementById("acName");
-    var accBalence = document.getElementById("acBalence");
-    const name = document.getElementById("accountNumber").value;
+    let welcomeName = document.getElementById("welcomeName");
+    let accNumber = document.getElementById("acNumber");
+    let accType = document.getElementById("acType");
+    let accName = document.getElementById("acName");
+    let accBalence = document.getElementById("acBalence");
 
+    const accountNum = document.getElementById("accountNumber").value;
+    
     const emiuser = JSON.parse(localStorage.getItem("emiuser"));
-    console.log(emiuser.length);
+    let flag=false;
     for(let i=0;i<emiuser.length;i++){
         let ac_number = emiuser[i].accountNumber;
-        if(ac_number===name){
+        if(ac_number===accountNum){
+            welcomeName.innerHTML=`Hii ${emiuser[i].firstName}`;
             accNumber.innerHTML=`${emiuser[i].accountNumber}`;
             accType.innerHTML = `${emiuser[i].accountType}`;
-            accName.innerHTML = `${emiuser[i].firstName} ${emiuser[i].lastName}`;
+            accName.innerText = `${emiuser[i].firstName} ${emiuser[i].lastName}`;
             accBalence.innerHTML = `${emiuser[i].balence}`;
+            flag=true;
             break;
         }
     }
-    // clear();
+    if(flag==false){
+        alert("Enter Valid Account No.")
+        dataDiv.hidden=true;
+        clear();
+    }
 }
 
 const clear=()=>{
-    document.getElementById("name").value=null;
+    document.getElementById("accountNumber").value=null;
 }
