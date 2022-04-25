@@ -1,4 +1,4 @@
-class Vehicle1{
+class Vehicle2{
     color:string;
 
     constructor(color:string){
@@ -21,7 +21,7 @@ class Vehicle1{
 // vehicle.honk();
 
 
-class Car extends Vehicle1{
+class Car1 extends Vehicle2{
     constructor(public wheels:number, color:string){
         super('voilet');
     }
@@ -37,8 +37,8 @@ class Car extends Vehicle1{
     }
 }
 
-const car = new Car(10,'red');
-car.drive();
+const car_a = new Car1(10,'red');
+car_a.drive();
 //car.honk();
-car.startDriving();
-console.log(car.color,car.wheels);
+car_a.startDriving();
+console.log(car_a.color,car_a.wheels);

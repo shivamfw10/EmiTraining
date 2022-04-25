@@ -13,42 +13,42 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Vehicle1 = /** @class */ (function () {
-    function Vehicle1(color) {
+var Vehicle2 = /** @class */ (function () {
+    function Vehicle2(color) {
         this.color = color;
     }
-    Vehicle1.prototype.drive = function () {
+    Vehicle2.prototype.drive = function () {
         console.log('slowly');
     };
-    Vehicle1.prototype.honk = function () {
+    Vehicle2.prototype.honk = function () {
         console.log('beep');
     };
-    return Vehicle1;
+    return Vehicle2;
 }());
 // const vehicle = new Vehicle1();
 // vehicle.drive();
 // vehicle.honk();
-var Car = /** @class */ (function (_super) {
-    __extends(Car, _super);
-    function Car(wheels, color) {
+var Car1 = /** @class */ (function (_super) {
+    __extends(Car1, _super);
+    function Car1(wheels, color) {
         var _this = _super.call(this, 'voilet') || this;
         _this.wheels = wheels;
         return _this;
     }
-    Car.prototype.drive = function () {
+    Car1.prototype.drive = function () {
         console.log("vroom");
     };
-    Car.prototype.license = function () {
+    Car1.prototype.license = function () {
         console.log("Yes");
     };
-    Car.prototype.startDriving = function () {
+    Car1.prototype.startDriving = function () {
         this.license();
         this.honk();
     };
-    return Car;
-}(Vehicle1));
-var car = new Car(10, 'red');
-car.drive();
+    return Car1;
+}(Vehicle2));
+var car_a = new Car1(10, 'red');
+car_a.drive();
 //car.honk();
-car.startDriving();
-console.log(car.color, car.wheels);
+car_a.startDriving();
+console.log(car_a.color, car_a.wheels);
