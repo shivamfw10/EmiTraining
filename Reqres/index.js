@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // async function pageLoad(){
 //     let users = await fetch(`https://reqres.in/api/users/`);
@@ -43,7 +42,6 @@
 // }).catch((err)=>{
 //     console.log(err);
 // })
-=======
 let url = "https://reqres.in/api/users/";
 
 async function getData(url){
@@ -70,4 +68,3 @@ const html = data.data.map(user=>{
     }).join("");
     document.querySelector("#datacard").insertAdjacentHTML("afterbegin",html);
 }
->>>>>>> ac57dff1eb4f72bf31068c36907c14d74cc7777b

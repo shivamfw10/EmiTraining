@@ -43,5 +43,4 @@ const fetchData=async()=>{
           box.append(outerdiv);
     });
 };
-
 fetchData();
