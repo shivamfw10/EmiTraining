@@ -4616,7 +4616,7 @@ function () {
   return User;
 }();
 
-exports.User = User;
+exports.User = User; //https://www.npmjs.com/package/prompts
 },{"axios":"node_modules/axios/index.js"}],"src/index.ts":[function(require,module,exports) {
 "use strict";
 
