@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "accountType": "Saving",
+      "accountNum": "Sav1212556677",
+      "amount": 1000,
+      "name": "Shivam",
+      "age": 25,
+      "email": "shivam@gmail.com",
+      "location": "Kanpur",
+      "state": "Uttat Pradesh",
+      "country": "India"
+    },
+    {
+      "accountNum": "Sav1122334455",
+      "accountType": "Saving",
+      "amount": 1000,
+      "name": "Aniket",
+      "age": 25,
+      "email": "aniket@gmail.com",
+      "location": "Kanpur",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "id": 2
+    },
+    {
+      "accountNum": "Cur1122334466",
+      "accountType": "Current",
+      "amount": 2000,
+      "name": "Vishnu",
+      "age": 25,
+      "email": "vishnu@gmail.com",
+      "location": "Lucknow",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "id": 3
+    }
+  ]
+}
