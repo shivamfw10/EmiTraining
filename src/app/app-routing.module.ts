@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'prefix'},
+  
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutusComponent},
   {path:'contact',component:ContactusComponent},
