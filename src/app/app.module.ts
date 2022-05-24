@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     AboutusComponent,
     DataBindingComponent,
     GalleryComponent,
-    ContactusComponent
+    ContactusComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
