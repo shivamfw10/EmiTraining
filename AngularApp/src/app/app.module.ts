@@ -17,6 +17,7 @@ import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { ServicesComponent } from './component/services/services.component';
 import { TrainingComponent } from './component/training/training.component';
+import { OrganizationComponent } from './component/organization/organization.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TrainingComponent } from './component/training/training.component';
     EmployeeEditComponent,
     EmployeeDeleteComponent,
     EmployeeAddComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    OrganizationComponent
   ],
   imports: [
     BrowserModule,
