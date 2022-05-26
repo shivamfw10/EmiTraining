@@ -10,6 +10,7 @@ import { ServicesComponent } from './component/services/services.component';
 import { TrainingComponent } from './component/training/training.component';
 
 const routes: Routes = [
+  {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component:HomeComponent},
   {path:"about",component:AboutusComponent},
   {path:"gallery",component:GalleryComponent},
