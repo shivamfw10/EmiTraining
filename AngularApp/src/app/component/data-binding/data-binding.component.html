@@ -1,0 +1,14 @@
+<p>data-binding works!</p>
+
+<h2>String Interpolation</h2>
+<p>Message : {{message}}</p>
+
+<h2>Property Binding</h2>
+<p><input type="text" [value]="message"></p>
+
+<h2>Event Binding</h2>
+<p><button type="submit" (click)="showData()">Event Binding</button></p>
+
+<h2>Two Way Binding</h2>
+<p><input type="text" [(ngModel)]="twoWay"></p>
+<p>Result <i>{{twoWay}}</i></p>
