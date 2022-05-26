@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+.headingStyle{
+    text-align: center;
+    color:red;
+    padding: 70px 0;
+    text-transform: capitalize;
+    font-size:8rem;
+    font-weight: 700;
+}
+a{
+    font-weight: 500;
+}
