@@ -10,6 +10,8 @@ import { HomeComponent } from './component/home/home.component';
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { ServicesComponent } from './component/services/services.component';
+import { MenuComponent } from './component/menu/menu.component';
+import { TrainingComponent } from './component/training/training.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ServicesComponent } from './component/services/services.component';
     ServicesComponent,
     ContactusComponent,
     PageNotFoundComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    MenuComponent,
+    TrainingComponent
   ],
   imports: [
     BrowserModule,
