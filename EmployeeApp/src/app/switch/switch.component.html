@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 text-center">
+        <h4 class="mt-3">Select Employee Name</h4>
+        <select class="form-control" [(ngModel)]="emp">
+            <option *ngFor="let employee of employees" [ngValue]="employee">{{employee.name}}</option>
+        </select>
+        <div class="mt-4" [ngSwitch]="emp.id">
+            <p *ngSwitchCase="'1'">Hi! If I'm right you belong to <b>{{emp.location}}</b></p>
+            <p *ngSwitchCase="'2'">Hi! If I'm right you belong to <b>{{emp.location}}</b></p>
+            <p *ngSwitchCase="'3'">Hi! If I'm right you belong to <b>{{emp.location}}</b></p>
+            <p *ngSwitchCase="'4'">Hi! If I'm right you belong to <b>{{emp.location}}</b></p>
+            <p *ngSwitchCase="">Please Select Correct Value</p>
+        </div>
+    </div>
+</div>
