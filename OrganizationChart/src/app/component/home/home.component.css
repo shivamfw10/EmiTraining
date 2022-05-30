@@ -1,0 +1,8 @@
+.headingStyle{
+    text-align: center;
+    color:red;
+    padding: 70px 0;
+    text-transform: capitalize;
+    font-size:8rem;
+    font-weight: 700;
+}

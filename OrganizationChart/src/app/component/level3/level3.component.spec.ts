@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EngineerinManagerComponent } from './engineerin-manager.component';
+import { Level3Component } from './level3.component';
 
-describe('EngineerinManagerComponent', () => {
-  let component: EngineerinManagerComponent;
-  let fixture: ComponentFixture<EngineerinManagerComponent>;
+describe('Level3Component', () => {
+  let component: Level3Component;
+  let fixture: ComponentFixture<Level3Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EngineerinManagerComponent ]
+      declarations: [ Level3Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EngineerinManagerComponent);
+    fixture = TestBed.createComponent(Level3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
