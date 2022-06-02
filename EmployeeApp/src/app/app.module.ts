@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { SwitchComponent } from './switch/switch.component';
+import { RouteParameterComponent } from './route-parameter/route-parameter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutUsComponent,
-    SwitchComponent
+    SwitchComponent,
+    RouteParameterComponent
   ],
   imports: [
     BrowserModule,
