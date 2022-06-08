@@ -1,0 +1,37 @@
+<div class="conatiner bg-gray">
+  <div class="row">
+    <div class="col-md-12 bg-warning">
+      <h3 class="text-center">Ng-2 Search Filter</h3>
+    </div>
+    <div class="col-md-6 offset-md-3 mt-3">
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control"
+          placeholder="search..."
+          [(ngModel)]="filter"
+          >
+      </div>
+      <table class="table table-info mt-2">
+        <thead class="thead table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Email</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userRecords |filter:filter">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.location}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
