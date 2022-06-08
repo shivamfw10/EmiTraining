@@ -1,0 +1,14 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    color: red;
+}
+
+h4{
+    color:maroon
+}
+h4+p{
+    font-weight: 700;
+    font-size: large;
+}

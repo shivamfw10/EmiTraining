@@ -1,0 +1,21 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <h3 class="text-center">Custom Directives</h3>
+            <p appHighlight>Highlight me!</p>
+            <p [appHighlight]="color">Highlight me!</p>
+            <h4 class="text-center">My First Attribute Directive</h4>
+            <p>Pick a highlight color</p>
+            <div>
+                <input type="radio" name="colors" (click)="color='lightgreen'">Green
+                <input type="radio" name="colors" (click)="color='yellow'">Yellow
+                <input type="radio" name="colors" (click)="color='cyan'">Cyan
+            </div>
+            <p [appHighlight]="color" defaultColor="red">Highlight me!</p>
+
+            <h3>ngNonBindable with a directive</h3>
+            <div ngNonBindable [appHighlight]="'violet'">This should not evaluate: {{ 1 +1 }}, but will highlight yellow.
+            </div>
+        </div>
+    </div>
+</div>
