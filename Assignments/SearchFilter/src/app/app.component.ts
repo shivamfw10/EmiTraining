@@ -43,6 +43,20 @@ export class AppComponent {
       age:25,
       location:'Pune',
       email:'saurabh@gmail.com'
+    },
+    {
+      id:6,
+      name:'Anurag',
+      age:26,
+      location:'Ratlam',
+      email:'anurag@gmail.com'
+    },
+    {
+      id:7,
+      name:'Abhinav',
+      age:27,
+      location:'Pune',
+      email:'abhinav@gmail.com'
     }
   ]
 }
