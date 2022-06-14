@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stored.component.css']
 })
 export class StoredComponent implements OnInit {
-  EmployeeRecords:any[]
+  EmployeeRecords:any[]=[];
   constructor() { }
 
   ngOnInit(): void {

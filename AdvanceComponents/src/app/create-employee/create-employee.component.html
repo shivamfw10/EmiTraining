@@ -1,12 +1,15 @@
-<p>create-employee works!</p>
+<hr>
+<h3 class="text-center text-warning text-bold mb-3">Check Angular Preficiency</h3>
 <div class="row">
-    <div class="col-md-4 offset-md-4">
+    <div class="col-md-10 offset-md-1">
         <label>Employee ID</label>
         <input type="text" name='id'[(ngModel)]="employee.id">
-        <label>Employee Name</label>
-        <input type="text" name='id'[(ngModel)]="employee.employeeName">
-        <label>Angular Preficiency</label>
+        <label class="ms-2">Name</label>
+        <input type="text" name='name'[(ngModel)]="employee.employeeName">
+        <label class="ms-2">Project Id</label>
+        <input type="text" name='projectId'[(ngModel)]="employee.projectId">
+        <label class="ms-2">Angular Preficiency</label>
         <input type="text" name='id'[(ngModel)]="employee.angularProficiency">
-        <button type="button" (click)="addEmployee()">Add Data</button>
+        <button class="ms-2" type="button" (click)="addEmployee()">Add Data</button>
     </div>
 </div>

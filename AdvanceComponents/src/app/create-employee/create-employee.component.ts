@@ -26,3 +26,4 @@ export class CreateEmployeeComponent implements OnInit {
     this.addEmployeeRecord.emit(data);
   }
 }
+
