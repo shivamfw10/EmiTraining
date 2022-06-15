@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EmployeeListComponent implements OnInit {
   @Input() employee:any=[];
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

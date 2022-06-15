@@ -9,10 +9,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let emp of employee;let i=index">
-        <th scope="row">{{i+1}}</th>
+        <!-- <th scope="row">{{i+1}}</th> -->
+        <th scope="row">{{emp.id}}</th>
         <td>{{emp.employeeName}}</td>
         <td>{{emp.projectId}}</td>
-        <td>{{emp.angularProficiency}}</td>
+        <td><app-rating [rating]="emp.angularProficiency"></app-rating></td>
       </tr>
     </tbody>
   </table>

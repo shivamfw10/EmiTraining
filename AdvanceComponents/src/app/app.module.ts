@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ParentComponent } from './parent/parent.component';
 import { StoredComponent } from './stored/stored.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StoredComponent } from './stored/stored.component';
     EmployeeComponent,
     EmployeeListComponent,
     StoredComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
