@@ -1,0 +1,13 @@
+<div class="container">
+  <p class="fs-3 text-primary text-bold text-center">Component Life Cycle</p>
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3 text-center">
+      <input type="text" #input/>
+      <button class="bg bg-success" (click)="OnSubmit(input)">Submit</button>
+      <app-demo [value]="inputText" *ngIf="destroy">
+        <h4>This is projected content : {{inputText}}</h4>
+      </app-demo><!--custom Property Binding-->
+      <button  class="bg bg-danger" (click)="DestroyComponent()">Destroy</button>
+    </div>
+  </div>
+</div>
