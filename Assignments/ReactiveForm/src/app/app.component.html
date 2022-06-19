@@ -1,0 +1,29 @@
+<div class="form">
+  <h2 id="registration">Registration Form</h2>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="personalDetails">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName" placeholder="Enter first name..."/>
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName" placeholder="Enter last name..."/>
+    </div>
+    <label>Email Id</label>
+    <input type="text" formControlName="email" placeholder="Enter email..."/>
+    <div>
+      <span style="color:red" *ngIf="!reactiveForm.get('email').valid">The email you entered not a valid email</span>
+    </div>
+    <label>Gender</label>
+    <input type="radio" formControlName="gender" value="male"/>Male 
+    <input type="radio" formControlName="gender" value="female"/>Female 
+    <input type="radio" formControlName="gender" value="other"/> Others 
+    <div formArrayName="skills">
+      <label> Skills</label>
+      <ng-container *ngFor="let skill of reactiveForm.get('skills')['controls']; index as i">
+       
+      <input type="text" placeholder="Enter skill..{{i+1}}" formControlName="{{i}}"/>
+      </ng-container>
+      <button (click)="addSkills()">Add Skills +</button>
+    </div>
+    <input type="submit" value="Submit" id="btn">
+  </form>
+</div>
