@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
 import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
 
@@ -9,10 +10,9 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
-emp: Employee={id:0,name:'',designation:'',department:'',Gender:'',sales:''}
-isDataLoading=true;
+  emp: Employee={id:0,name:'',designation:'',department:'',Gender:'',sales:''}
+  isDataLoading=true;
   constructor(private empService:EmployeeService,private route:ActivatedRoute,private router:Router) { }
-
   ngOnInit(): void {
     this.getEmployee(this.route.snapshot.params['id']);
   }
@@ -32,7 +32,7 @@ isDataLoading=true;
     this.empService.deleteEmployee(id).subscribe(response=>{
       this.isDataLoading=false;
       this.router.navigate(['/list']);
-    },err=>{
+    },(err)=>{
       console.log(err);
       this.isDataLoading=false;
     })
