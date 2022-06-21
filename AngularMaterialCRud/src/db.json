@@ -1,14 +1,6 @@
 {
   "Employee": [
     {
-      "id": 3,
-      "name": "James",
-      "designation": "Escalation Manager",
-      "department": "Support",
-      "Gender": "Male",
-      "sales": "Achieved"
-    },
-    {
       "id": 4,
       "name": "Smitha",
       "designation": "Data Testing Engineer",
