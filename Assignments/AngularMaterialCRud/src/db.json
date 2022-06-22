@@ -1,0 +1,46 @@
+{
+  "Employee": [
+    {
+      "name": "Mayura",
+      "designation": "Technical Trainer ",
+      "department": "Technology",
+      "Gender": "F",
+      "id": 4
+    },
+    {
+      "name": "Satya",
+      "designation": "SDE2",
+      "department": "Technology",
+      "Gender": "M",
+      "id": 5
+    },
+    {
+      "name": "Sachin",
+      "designation": "SDE1",
+      "department": "Technology",
+      "Gender": "M",
+      "id": 6
+    },
+    {
+      "name": "Saurabh",
+      "designation": "SDE2",
+      "department": "Technology",
+      "Gender": "M",
+      "id": 7
+    },
+    {
+      "name": "Nagraj",
+      "designation": "Senior Tech Lead",
+      "department": "Technology",
+      "Gender": "M",
+      "id": 8
+    },
+    {
+      "name": "Aditya",
+      "designation": "SDE1",
+      "department": "Technology",
+      "Gender": "M",
+      "id": 12
+    }
+  ]
+}
