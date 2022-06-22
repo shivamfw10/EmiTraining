@@ -11,7 +11,7 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./edit-employee.component.css']
 })
 export class EditEmployeeComponent implements OnInit {
-  emp: Employee={id:0,name:'',designation:'',department:'',Gender:'',sales:''}
+  emp = new Employee();
   empForm:FormGroup;
 isDataLoading=false;
  disabled = false;
