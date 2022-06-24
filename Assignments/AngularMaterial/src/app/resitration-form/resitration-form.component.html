@@ -1,7 +1,27 @@
 <h1 mat-dialog-title>Add Url Information</h1>
 <div mat-dialog-content class="box-color">
-    <mat-form-field class="example-full-width" appearance="standard">
+    <mat-form-field appearance="standard">
         <mat-label>ID</mat-label>
         <input matInput formControlName="id">
     </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>From</mat-label>
+        <input matInput formControlName="from">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>To</mat-label>
+        <input matInput formControlName="to">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Choose a date</mat-label>
+        <input matInput formControlName="to">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Permanant Link</mat-label>
+        <input matInput formControlName="url">
+    </mat-form-field>
+    <div style="margin-bottom:10px;">
+        <button mat-raised-button color="primary" style="margin-right:15px;">Save</button>
+        <button mat-raised-button>Cancel</button>
+    </div>
 </div>
