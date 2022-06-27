@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DatalistComponent } from './shared/datalist/datalist.component';
 import { EditTicketComponent } from './ticket/edit-ticket/edit-ticket.component';
 import { GenerateReportComponent } from './generate-report/generate-report.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -13,6 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NgModule } from '@angular/core';
@@ -32,7 +35,8 @@ import { ViewTicketComponent } from './ticket/view-ticket/view-ticket.component'
     ViewTicketComponent,
     EditTicketComponent,
     GenerateReportComponent,
-    NavbarComponent
+    NavbarComponent,
+    DatalistComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { ViewTicketComponent } from './ticket/view-ticket/view-ticket.component'
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
