@@ -61,5 +61,4 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {ticketid: '26', department: 'Dep1', category:'cat1', subCategory: 'sub1',status:'open',customer:'cust1',issueTime:'27/06/2022',age:'5 Hr', lastModifiedDate:'24/06/2020'},
   {ticketid: '27', department: 'Dep1', category:'cat1', subCategory: 'sub1',status:'open',customer:'cust1',issueTime:'27/06/2022',age:'5 Hr', lastModifiedDate:'24/06/2020'},
   {ticketid: '28', department: 'Dep1', category:'cat1', subCategory: 'sub1',status:'open',customer:'cust1',issueTime:'27/06/2022',age:'5 Hr', lastModifiedDate:'24/06/2020'},
-  
 ];

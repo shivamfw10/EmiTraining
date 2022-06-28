@@ -2,8 +2,9 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     </button>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon color="warn">radar</mat-icon>
-      </button>
-      <span>One Tracker</span>
+    <button mat-button routerLink="/landingpage">
+        <mat-icon color="warn">radar</mat-icon>&nbsp;&nbsp;
+        <span class="logo">One Tracker</span>
+    </button>
   </mat-toolbar>
+  <router-outlet></router-outlet>
