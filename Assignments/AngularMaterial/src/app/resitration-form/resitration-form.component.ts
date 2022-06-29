@@ -26,5 +26,6 @@ export class ResitrationFormComponent implements OnInit {
   onSubmit(){
     this.formData.push(this.UrlListData.value);
     this.service.sharedata(this.formData);
+    this.MatDialog.closeAll();
   }
 }

@@ -23,7 +23,7 @@
 
       <ng-container matColumnDef="url">
         <th mat-header-cell *matHeaderCellDef> Permanant Link </th>
-        <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+        <td mat-cell *matCellDef="let element"><app-url [permanantLink]="element.url"></app-url></td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
