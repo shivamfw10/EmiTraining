@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { CommunicateService } from './../communicate.service';
+import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 import {MatPaginator} from '@angular/material/paginator';
@@ -10,14 +11,22 @@ import {ResitrationFormComponent} from '../resitration-form/resitration-form.com
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements AfterViewInit {
+export class ListComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   displayedColumns: string[] = ['id', 'from', 'to', 'crDate','url'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  constructor(public dialog:MatDialog){}
+  dataSource = new MatTableDataSource<UrlList>(UrlListData);
+  url:boolean | undefined;
+  constructor(public dialog:MatDialog, private service:CommunicateService){}
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+  ngOnInit(): void {
+    this.service.subject.subscribe((data:any)=>{
+      const records = Object.assign({},...data);
+      UrlListData.push(records);
+      console.log(records)
+    })
   }
   openDialog(){
     this.dialog.open(ResitrationFormComponent,{
@@ -27,33 +36,18 @@ export class ListComponent implements AfterViewInit {
   }
 }
 
-export interface PeriodicElement {
+export interface UrlList {
   id:number;
   from: string;
   to: string;
   crDate:string;
-  url:boolean
+  url:string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, from: 'https://material.angular.io/components/form-field/api', to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 2, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 3, from: 'https://material.angular.io/components/form-field/api',to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 4, from: 'https://material.angular.io/components/form-field/api', to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 5, from: 'https://material.angular.io/components/form-field/api',to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 6, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 7, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 8, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 9, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 10, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 11, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 12, from: 'https://material.angular.io/components/form-field/api', to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 13, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 14, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 15, from: 'https://material.angular.io/components/form-field/api', to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 16, from: 'https://material.angular.io/components/form-field/api',to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 17, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 18, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 19, from: 'https://material.angular.io/components/form-field/api', to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
-  {id: 20, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:true},
+const UrlListData: UrlList[] = [
+  {id: 1, from: 'https://material.angular.io/components/form-field/api', to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:'true'},
+  {id: 2, from: 'https://material.angular.io/components/form-field/api',to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:'true'},
+  {id: 3, from: 'https://material.angular.io/components/form-field/api',to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:'true'},
+  {id: 4, from: 'https://material.angular.io/components/form-field/api', to: 'http://localhost:4205/', crDate:'1 Jan, 1970',url:'true'},
+  {id: 5, from: 'https://material.angular.io/components/form-field/api',to:'http://localhost:4205/', crDate:'1 Jan, 1970',url:'true'},
 ];

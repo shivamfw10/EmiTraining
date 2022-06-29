@@ -1,10 +1,9 @@
 <h1 mat-dialog-title>Add Url Information</h1>
 <div mat-dialog-content class="box-color">
-   <form>
+   <form [formGroup]="UrlListData">
     <mat-form-field appearance="standard">
         <mat-label>ID</mat-label>
         <input matInput formControlName="id" required>
-        <!-- <mat-hint align="end">Enter Id in Number</mat-hint> -->
     </mat-form-field>
     <mat-form-field appearance="standard">
         <mat-label>From</mat-label>
@@ -16,15 +15,17 @@
     </mat-form-field>
     <mat-form-field appearance="standard">
         <mat-label>Choose a date</mat-label>
-        <input matInput formControlName="to" required>
+        <input matInput [matDatepicker]="picker" formControlName="crDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-form-field appearance="standard">
+    <!-- <mat-form-field appearance="standard">
         <mat-label>Permanant Link</mat-label>
         <input matInput formControlName="url" required>
-    </mat-form-field>
+    </mat-form-field> -->
     <div style="margin-bottom:10px;">
-        <button mat-raised-button color="primary" style="margin-right:15px;">Save</button>
-        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button color="primary" style="margin-right:15px;" (click)="onSubmit()">Save</button>
+        <button mat-raised-button [mat-dialog-close]="true">Cancel</button>
     </div>
    </form>
 </div>
