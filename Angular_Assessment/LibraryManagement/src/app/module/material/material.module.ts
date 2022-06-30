@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import {MatBadgeModule} from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,8 +11,8 @@ const MatModule =[
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
-  MatMenuModule
-  
+  MatMenuModule,
+  MatBadgeModule
 ]
 @NgModule({
   declarations: [],
