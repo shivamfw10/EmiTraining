@@ -1,21 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './components/shared/login/login.component';
-import { RegistrationComponent } from './components/shared/registration/registration.component';
 import { AddBookComponent } from './components/admin/add-book/add-book.component';
-import { EditBookComponent } from './components/admin/edit-book/edit-book.component';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BookListComponent } from './components/admin/book-list/book-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { EditBookComponent } from './components/admin/edit-book/edit-book.component';
+import { LandingPageComponent } from './components/user/landing-page/landing-page.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import { MaterialModule } from './module/material/material.module';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { NgModule } from '@angular/core';
+import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { RegistrationComponent } from './components/shared/registration/registration.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { ViewBookComponent } from './components/admin/view-book/view-book.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ViewCartComponent } from './components/user/view-cart/view-cart.component';
-import { LandingPageComponent } from './components/user/landing-page/landing-page.component';
-import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
-import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
