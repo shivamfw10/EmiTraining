@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 320px;
+    height: 150px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/4257/4257824.png');
+    background-size: cover;
+  }
+  .container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
