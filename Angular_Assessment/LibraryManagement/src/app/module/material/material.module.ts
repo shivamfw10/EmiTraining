@@ -8,9 +8,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
-
 const MatModule =[
   MatGridListModule,
   MatButtonModule,
@@ -22,7 +23,10 @@ const MatModule =[
   MatInputModule,
   MatCardModule,
   MatInputModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatPaginatorModule,
+  MatTableModule
 ]
 @NgModule({
   declarations: [],
