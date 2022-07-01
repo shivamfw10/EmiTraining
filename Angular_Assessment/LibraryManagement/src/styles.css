@@ -2,20 +2,3 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-@media screen and (max-width: 992px) {
-    .container{
-      background-color: blue;
-      height: 800px;
-
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .container{
-      background-color: olive;
-      height: 500px;
-    }
-    mat-toolbar{
-        width: 100%;
-    }
-  }

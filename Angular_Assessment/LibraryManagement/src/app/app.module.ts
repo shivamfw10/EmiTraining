@@ -12,6 +12,7 @@ import { MaterialModule } from './module/material/material.module';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/shared/registration/registration.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { ViewBookComponent } from './components/admin/view-book/view-book.component';
@@ -37,7 +38,8 @@ import { ViewCartComponent } from './components/user/view-cart/view-cart.compone
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
