@@ -4,3 +4,4 @@ export class Employee {
     projectId:number;
     angularProficiency:number;
 }
+

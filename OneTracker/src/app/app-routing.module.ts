@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { GenerateReportComponent } from './generate-report/generate-report.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LoginComponent } from './login/login.component';
+import { AddTicketComponent } from './components/ticket/add-ticket/add-ticket.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GenerateReportComponent } from './components/generate-report/generate-report.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './../../../OrganizationChart/src/app/component/page-not-found/page-not-found.component';
 
