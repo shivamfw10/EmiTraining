@@ -1,0 +1,29 @@
+{
+    "admin": [
+      {
+        "id": 1,
+        "userName": "shivam",
+        "email": "shivam@gmail.com",
+        "password":"Shivam",
+        "role":"admin"
+      }
+    ],
+    "user": [
+      {
+        "id": 1,
+        "userName": "Anurag",
+        "userEmail":"anurag@gmail.com",
+        "userPassword":"Anurag@123",
+        "pickupDate":"03/07/2022",
+        "returnDate":"06/07/2022",
+        "book":[{"bookId":5,"title":"ASP.NET Core","author":"Brian Travis","category":"Programming"}]
+      }
+    ],
+    "book": [
+        {"bookId": 1, "title": "ASP.NET Core", "author":"Brian Travis", "category":"Programming","quantity":20},
+        {"bookId": 2, "title": "Java Programing", "author":"Thiru Thangarathinam", "category":"Programming","quantity":20},
+        {"bookId": 3, "title": "SQL Server 2008", "author":"Mark Collins", "category":"Programming","quantity":20},
+        {"bookId": 4, "title": "MYSQL", "author":"Bill Evjen", "category":"Programming","quantity":20},
+        {"bookId": 5, "title": "Civil Drawing", "author":"Mario Szpuszta", "category":"Civil","quantity":20}
+    ]
+  }
