@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { EditBookComponent } from './components/admin/edit-book/edit-book.component';
+import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './components/user/landing-page/landing-page.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { MaterialModule } from './module/material/material.module';
@@ -39,7 +40,8 @@ import { ViewCartComponent } from './components/user/view-cart/view-cart.compone
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
