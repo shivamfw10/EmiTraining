@@ -32,7 +32,7 @@ import { ViewCartComponent } from './components/user/view-cart/view-cart.compone
     ViewCartComponent,
     LandingPageComponent,
     PageNotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
